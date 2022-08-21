@@ -1,0 +1,202 @@
+/*
+
+.c-left {
+  flex: 1;
+}
+
+.c-info-item {
+  display: flex;
+  align-items: center;
+  margin: 50px 0px;
+  font-weight: 300;
+  width: 70%;
+}
+
+.c-desc {
+  font-weight: 200;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 10px 0px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+textarea {
+  width: 100%;
+  margin: 10px 0px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+*/
+button {
+  border: none;
+  padding: 15px;
+  background-color: #007CC7;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/*
+@media screen and (max-width: 480px) {
+  .c-wrapper {
+    flex-direction: column;
+    padding: 0px 50px;
+  }
+
+  .c-title {
+    font-size: 30px;
+  }
+
+  .c-desc {
+    display: none;
+  }
+
+  form {
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  input {
+    width: 35%;
+    height: 40px;
+    margin: 10px;
+    margin-left: 0;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+}
+*/
+
+
+.c-title {
+  font-size: 60px;
+  width: 80%;
+  text-align: center;
+  margin-left: 8rem;
+}
+
+.c-wrapper {
+  padding: 50px;
+  display: flex;
+}
+
+.c {
+  height: 100vh;
+  position: relative;
+}
+
+.c-bg {
+  width: 20px;
+  height: 100%;
+  
+  background-color: #007CC7;
+  position: absolute;
+}
+
+.c-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.c-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-info-item {
+  margin: 20px 0px;
+  width: 100%;
+}
+
+.container.contact__container{
+  width: 68%;
+  display: grid;
+  grid-template-columns: 40% 58%;
+  gap: 12%;
+}
+
+.contact__options{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__option{
+  background: var(--color-bg-variant);
+  padding: 1.2rem 5rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.contact__option:hover{
+  background-color: transparent;
+  border-color: var(--color-primary-variant);
+  margin-left: 2rem;
+}
+
+.contact__option-icon{
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__option a{
+  margin-top: 0.7rem;
+  display: inline-block;
+}
+
+.contact__option h4{
+  text-align: center;
+  padding: 0rem 1rem;
+}
+
+/* ==================== FORM ==================== */
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; 
+}
+
+input, textarea{
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  /* border: 2px solid var(--color-primary-variant); */
+  border: 2px solid rgba(255, 255, 255, 0);
+  resize: none;
+  color: var(--color-white);
+}
+
+/* ==================== MEDIA QUERIES (MEDIUM DEVICES) ==================== */
+@media screen and (max-width: 1024px) {
+  .container.contact__container{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ==================== MEDIA QUERIES (SMALL DEVICES) ==================== */
+@media screen and (max-width: 600px) {
+  .container.contact__container{
+    width: var(--container-width-sm);
+  }
+}
