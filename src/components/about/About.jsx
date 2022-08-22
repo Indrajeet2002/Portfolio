@@ -1,5 +1,5 @@
 import "./about.css";
-import Award from "../../img/award.png";
+//import Award from "../../img/award.png";
 
 const About = () => {
   return (
@@ -21,19 +21,19 @@ const About = () => {
           <h1 className="a-title">About Me</h1>
           <div>
             <p>
-              Computer Science major at <a href="http://www.fullerton.edu/" className="i-desc" target="_blank">CSUF</a>
+              Computer Science major at <a href="http://www.fullerton.edu/" className="i-desc" target="_blank" rel="noreferrer">CSUF</a>
             </p>
             <p>
-              <a href="https://drive.google.com/file/d/1CPqUU96kMNw5wN-8wVw0zpTZGO6ZpNFQ/view" className="i-desc" target="_blank">Resume</a>
+              <a href="https://drive.google.com/file/d/1CPqUU96kMNw5wN-8wVw0zpTZGO6ZpNFQ/view" className="i-desc" target="_blank" rel="noreferrer">Resume</a>
             </p>
             <p>
               Technical Writing:
               <ul>
                 <li>
-                  <a href="https://drive.google.com/file/d/1hOSVO2mKmXuDOW753yE6F-P4XLR44gpX/view" className="i-desc" target="_blank">Buffer Overflow Attacks</a>
+                  <a href="https://drive.google.com/file/d/1hOSVO2mKmXuDOW753yE6F-P4XLR44gpX/view" className="i-desc" target="_blank" rel="noreferrer">Buffer Overflow Attacks</a>
                 </li>
                 <li>
-                  <a href="https://drive.google.com/file/d/1MuUlPsbO4mStJ8teKEWyYoF55rWHf1VI/view?usp=sharing" className="i-desc" target="_blank">CRC Cards Paper</a>
+                  <a href="https://drive.google.com/file/d/1MuUlPsbO4mStJ8teKEWyYoF55rWHf1VI/view?usp=sharing" className="i-desc" target="_blank" rel="noreferrer">CRC Cards Paper</a>
                 </li>
               </ul>
               
