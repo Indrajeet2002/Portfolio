@@ -89,11 +89,12 @@ import React from "react";
 import "./contact.css"
 import { useRef } from 'react';
 import emailjs from "emailjs-com"
-import Phone from "../../img/phone.png";
+//import Phone from "../../img/phone.png";
 import Whatsapp from "../../img/whatsapp.png";
 import Email from "../../img/email.png";
 import LinkedIn from "../../img/linkedin.png";
-import { useContext, useState } from "react";
+import { useContext } from "react";
+//import { useState } from "react";
 import { ThemeContext } from "../../context";
 // import icons
 // import {MdOutlineEmail} from "react-icons/md"
@@ -130,7 +131,7 @@ const Contact = () => {
                 <img className="c-icon" src={Email} alt="" />
                 <h3>Email</h3>
                 <h4>Indrajeet.patwardhan@gmail.com</h4>
-                <a href="mailto:Indrajeet.patwardhan@gmail.com" target="_blank">Send a message</a>
+                <a href="mailto:Indrajeet.patwardhan@gmail.com" target="_blank" rel="noreferrer">Send a message</a>
             </article>
           </div>
           <div className="c-info-item">
@@ -139,7 +140,7 @@ const Contact = () => {
               <img className="c-icon" src={Whatsapp} alt="" />
               <h3>Whatsapp</h3>
               <h4>9498729524</h4>
-              <a href="https://api.whatsapp.com/send?phone=9498729524" target="_blank">Send a message</a>
+              <a href="https://api.whatsapp.com/send?phone=9498729524" target="_blank" rel="noreferrer">Send a message</a>
             </article>
           </div>
           <div className="c-info-item">
@@ -147,7 +148,7 @@ const Contact = () => {
               {/* <BsWhatsapp classname="contact__option-icon"/> */}
               <img className="c-icon" src={LinkedIn} alt="" />
               <h3>LinkedIn</h3>
-              <a href="https://www.linkedin.com/in/indrajeet-patwardhan-163b08211/" target="_blank">View Profile</a>
+              <a href="https://www.linkedin.com/in/indrajeet-patwardhan-163b08211/" target="_blank" rel="noreferrer">View Profile</a>
             </article>
           </div>
         </div>
