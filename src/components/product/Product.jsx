@@ -6,8 +6,9 @@ import IMG2 from "../../img/ProgramGenerator.png"
 import IMG3 from "../../img/JobHunter.png"
 import IMG4 from "../../img/CaveEscape.png"
 import IMG5 from "../../img/SnakeGame.png"
-import { NavLink } from "react-router-dom";
-import { useContext, useState } from "react";
+//import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+//import { useState } from "react";
 import { ThemeContext } from "../../context";
 
 const data = [
@@ -108,7 +109,7 @@ const Product = () => {
                     <div className="pro-details">
                       <p>{description}</p>
                       <div className="pro-btns">
-                        <a href={github} className="btn" target="_blank">Github</a>
+                        <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>
                       </div>
                     </div>
                   </div>
