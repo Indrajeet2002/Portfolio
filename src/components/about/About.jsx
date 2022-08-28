@@ -24,7 +24,7 @@ const About = () => {
               Computer Science major at <a href="http://www.fullerton.edu/" className="i-desc" target="_blank" rel="noreferrer">CSUF</a>
             </p>
             <p>
-              <a href="https://drive.google.com/file/d/1CPqUU96kMNw5wN-8wVw0zpTZGO6ZpNFQ/view" className="i-desc" target="_blank" rel="noreferrer">Resume</a>
+              <a href="https://drive.google.com/file/d/1uIYVJhpqya9i14NGxY0GG5Qa60n-it9m/view?usp=sharing" className="i-desc" target="_blank" rel="noreferrer">Resume</a>
             </p>
             <p>
               Technical Writing:
