@@ -3,14 +3,15 @@ import { useContext } from "react";
 import Contact from "./components/contact/Contact";
 import Intro from "./components/intro/Intro";
 import About from "./components/about/About";
-import Navbar from "./components/navbar";
+//import Navbar from "./components/navbar";
 //import ProductList from "./components/productList/ProductList";
-import Resume from "./components/resume/Resume";
+//import Resume from "./components/resume/Resume";
 import Product from "./components/product/Product";
 import Toggle from "./components/toggle/Toggle";
 import { ThemeContext } from "./context";
-import { Route, Routes, Link } from "react-router-dom";
-import Technicalwriting from "./components/technicalWriting/TechnicalWriting";
+import { Route, Routes } from "react-router-dom";
+//import { Link } from "react-router-dom";
+//import Technicalwriting from "./components/technicalWriting/TechnicalWriting";
 
 const App = () => {
   const theme = useContext(ThemeContext);
