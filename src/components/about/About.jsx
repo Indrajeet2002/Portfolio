@@ -21,10 +21,29 @@ const About = () => {
           <h1 className="a-title">About Me</h1>
           <div>
             <p>
-              Computer Science major at <a href="http://www.fullerton.edu/" className="i-desc" target="_blank" rel="noreferrer">CSUF</a>
+              Hi I'm Indrajeet, a Computer Science Master's Student at <a href="http://www.fullerton.edu/" className="i-desc" target="_blank" rel="noreferrer">CSUF</a>
             </p>
             <p>
-              <a href="https://drive.google.com/file/d/1uIYVJhpqya9i14NGxY0GG5Qa60n-it9m/view?usp=sharing" className="i-desc" target="_blank" rel="noreferrer">Resume</a>
+              <a href="https://drive.google.com/file/d/1INKSLM9CxSArLdIrU5rUczb1JzXcbd9b/view?usp=sharing" className="i-desc" target="_blank" rel="noreferrer">Resume</a>
+            </p>
+            <p>
+              Education:
+              <ul>
+                <li>
+                  Bachelor's Degree in Computer Science at CSUF
+                </li>
+              </ul>
+            </p>
+            <p>
+              Experience:
+              <ul>
+                <li>
+                  Project Intern at LTIMindtree
+                </li>
+                <li>
+                  Summer Research Intern with ASSURE-US
+                </li>
+              </ul>
             </p>
             <p>
               Technical Writing:

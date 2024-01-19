@@ -3,9 +3,10 @@ import React from "react";
 //TODO: import 5 images
 import IMG1 from "../../img/PortfolioWebsite.png"
 import IMG2 from "../../img/ProgramGenerator.png"
-import IMG3 from "../../img/JobHunter.png"
-import IMG4 from "../../img/CaveEscape.png"
-import IMG5 from "../../img/SnakeGame.png"
+import IMG3 from "../../img/Movify.jpg"
+import IMG4 from "../../img/JobHunter.png"
+import IMG5 from "../../img/CaveEscape.png"
+import IMG6 from "../../img/SnakeGame.png"
 //import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 //import { useState } from "react";
@@ -17,7 +18,7 @@ const data = [
     image: IMG1,
     title: "Portfolio Website",
     description: "Personal website displaying technical skills and projects.",
-    github: ""
+    github: "https://github.com/Indrajeet2002/Portfolio"
   },
     
   {
@@ -31,26 +32,50 @@ const data = [
   {
     id: 3,
     image: IMG3,
+    title: "Movify",
+    description: "The website allows users to make an account and create personalized playlists of their favorite movies.",
+    github: "https://github.com/Indrajeet2002/my-app"
+  },
+
+  {
+    id: 4,
+    image: IMG4,
     title: "Job Hunter",
     description: "The website allows employers and employees to make an account, as well as post jobs and apply for jobs, respectively.",
     github: "https://github.com/Indrajeet2002/Job-Hunter"
   },
 
   {
-    id: 4,
-    image: IMG4,
+    id: 5,
+    image: IMG5,
     title: "Cave Escape",
     description: "This is a text based game in which the player has to move through several rooms collecting items and escape.",
     github: "https://github.com/Indrajeet2002/CaveEscape"
   },
 
   {
-    id: 5,
-    image: IMG5,
+    id: 6,
+    image: IMG6,
     title: "Snake Game",
     description: "The good old snake game; eat the fruit to become longer and get the high score.",
     github: "https://github.com/Indrajeet2002/SnakeGame"
   },
+
+  // {
+  //   id: 7,
+  //   image: IMG6,
+  //   title: "Expense Tracker",
+  //   description: "An IOS app that allows users to create accounts and manage their finances based on categories of expenses.",
+  //   github: "https://github.com/Indrajeet2002/Expense-Tracker"
+  // },
+
+  // {
+  //   id: 8,
+  //   image: IMG6,
+  //   title: "World Trotter",
+  //   description: "An IOS app that allows for conversion between Fahrenheit and Celsius as well as translation between English and Spanish.",
+  //   github: "https://github.com/Indrajeet2002/World-Trotter"
+  // },
 
   // {
   //   id: 6,
@@ -69,7 +94,7 @@ const Product = () => {
   return (
     <section id="product">
       <h1 className="portfolio__section-title">Projects</h1>
-
+      {/* <p>Web Development</p> */}
       <div className="container portfolio__container">
         {
           data.map(({id, image, title, description, github}) => {
@@ -121,6 +146,9 @@ const Product = () => {
         }
         
       </div>
+
+      {/* <p>Mobile Development</p>
+      <p>Game Development</p> */}
     </section>
   )
 }
