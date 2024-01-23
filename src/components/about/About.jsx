@@ -1,7 +1,34 @@
+import React, { useEffect } from 'react';
 import "./about.css";
 //import Award from "../../img/award.png";
 
 const About = () => {
+
+  useEffect(() => {
+    // Select all elements with the class '.card__inner'
+    const cards = document.querySelectorAll(".card__inner");
+  
+    // Define the click event handler function
+    const handleCardClick = function (e) {
+      // Toggle the 'is-flipped' class for the clicked card
+      this.classList.toggle('is-flipped');
+    };
+  
+    // Add click event listener to each card
+    cards.forEach(card => {
+      card.addEventListener("click", handleCardClick);
+    });
+  
+    // Cleanup the event listeners on component unmount
+    return () => {
+      // Remove click event listener from each card
+      cards.forEach(card => {
+        card.removeEventListener("click", handleCardClick);
+      });
+    };
+  }, []);
+  
+
   return (
     <div className="a">
       <div className="a-left">
@@ -16,68 +43,63 @@ const About = () => {
         </div> */}
       </div>
       <div className="a-right">
-        <div className="a-right-wrapper">
+        <div className="a-right-wrapper a-card-container">
           
           <h1 className="a-title">About Me</h1>
-          <div>
-            <p>
-              Hi I'm Indrajeet, a Computer Science Master's Student at <a href="http://www.fullerton.edu/" className="i-desc" target="_blank" rel="noreferrer">CSUF</a>
-            </p>
-            <p>
-              <a href="https://drive.google.com/file/d/1INKSLM9CxSArLdIrU5rUczb1JzXcbd9b/view?usp=sharing" className="i-desc" target="_blank" rel="noreferrer">Resume</a>
-            </p>
-            <p>
-              Education:
-              <ul>
-                <li>
-                  Bachelor's Degree in Computer Science at CSUF
-                </li>
-              </ul>
-            </p>
-            <p>
-              Experience:
-              <ul>
-                <li>
-                  Project Intern at LTIMindtree
-                </li>
-                <li>
-                  Summer Research Intern with ASSURE-US
-                </li>
-              </ul>
-            </p>
-            <p>
-              Technical Writing:
-              <ul>
-                <li>
-                  <a href="https://drive.google.com/file/d/1hOSVO2mKmXuDOW753yE6F-P4XLR44gpX/view" className="i-desc" target="_blank" rel="noreferrer">Buffer Overflow Attacks</a>
-                </li>
-                <li>
-                  <a href="https://drive.google.com/file/d/1MuUlPsbO4mStJ8teKEWyYoF55rWHf1VI/view?usp=sharing" className="i-desc" target="_blank" rel="noreferrer">CRC Cards Paper</a>
-                </li>
-              </ul>
-              
-            </p>
-          </div>
-          {/* <p className="a-sub">
-            It is a long established fact that a reader will be distracted by the
-            readable content.
-          </p>
-          <p className="a-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat duis aute irure dolor in reprehende.
-          </p>
-          <div className="a-award">
-            <img src={Award} alt="" className="a-award-img" />
-            <div className="a-award-texts">
-              <h4 className="a-award-title">International Design Awards 2021</h4>
-              <p className="a-award-desc">
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur autodit
-                and fugit.
-              </p>
+
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__face card__face--front">
+                  <h2>Education</h2>
+                </div>
+                <div class="card__face card__face--back">
+                  <div class="card__content">
+                    <div class="card__body">
+                      <ul>
+                        <li>Bachelor's Degree in Computer Science at CSUF</li>
+                        <li><a href="https://drive.google.com/file/d/1INKSLM9CxSArLdIrU5rUczb1JzXcbd9b/view?usp=sharing" class="i-desc" target="_blank" rel="noreferrer">Resume</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div> */}          
+
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__face card__face--front">
+                  <h2>Experience</h2>
+                </div>
+                <div class="card__face card__face--back">
+                  <div class="card__content">
+                    <div class="card__body">
+                      <ul><li>Project Intern at LTIMindtree</li>
+                        <li>Summer Research Intern with ASSURE-US</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card__inner">
+                <div class="card__face card__face--front">
+                  <h2>Technical Writing</h2>
+                </div>
+                <div class="card__face card__face--back">
+                  <div class="card__content">
+                    <div class="card__body">
+                      <ul>
+                        <li><a href="https://drive.google.com/file/d/1hOSVO2mKmXuDOW753yE6F-P4XLR44gpX/view" class="i-desc" target="_blank" rel="noreferrer">Buffer Overflow Attacks</a></li>
+                        <li><a href="https://drive.google.com/file/d/1MuUlPsbO4mStJ8teKEWyYoF55rWHf1VI/view?usp=sharing" class="i-desc" target="_blank" rel="noreferrer">CRC Cards Paper</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
         </div>
 
       </div>
