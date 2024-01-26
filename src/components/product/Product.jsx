@@ -17,7 +17,7 @@ const data = [
     id: 1,
     image: IMG1,
     title: "Portfolio Website",
-    description: "Personal website displaying technical skills and projects.",
+    description: "Personal website displaying technical skills and projects. Get to know me and feel free to contact me for collaboration on projects!",
     github: "https://github.com/Indrajeet2002/Portfolio"
   },
     
@@ -25,7 +25,7 @@ const data = [
     id: 2,
     image: IMG2,
     title: "Program Generator",
-    description: "The website uses personal information to generate a fitness program for the user.",
+    description: "The website uses personal information and fitness goals to generate a fitness program for the user.",
     github: "https://github.com/Indrajeet2002/Program-Generator-React"
   },
 
@@ -57,7 +57,7 @@ const data = [
     id: 6,
     image: IMG6,
     title: "Snake Game",
-    description: "The good old snake game; eat the fruit to become longer and get the high score.",
+    description: "The good old snake game; eat the fruit to become longer and get the high score, but don't hit the wall or yourself!",
     github: "https://github.com/Indrajeet2002/SnakeGame"
   },
 

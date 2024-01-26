@@ -93,14 +93,20 @@
   padding: 4rem 0 2rem 0;
 }
 
-.project-card{
+.project-card {
   background: #fff;
   padding: 1.2rem 1rem;
   box-shadow: 10px 10px 8px #9a9a9a;
+  height: 320px; /* Set a fixed height for all cards */
+  display: flex;
+  flex-direction: column;
 }
 
-.project-card img{
+.project-card img {
   width: 100%;
+  height: auto;
+  max-height: 160px; /* Set a maximum height for the image */
+  object-fit: cover;
 }
 
 .project-title{
