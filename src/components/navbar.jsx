@@ -1,43 +1,17 @@
 import React from "react";
 import "./navbar.css";
-import {Link} from "react-router-dom";
-
-// function Navbar(){
-//     return <nav className="nav">
-//         <a href="/" className="site-title">Portfolio</a>
-//         <ul>
-//             <li className="active">
-//                 <a href="/pricing">Intro</a>
-//             </li>
-//             <li>
-//                 <a href="/about">Projects</a>
-//             </li>
-//             <li>
-//                 <a href="/pricing">Contact</a>
-//             </li>
-//         </ul>
-//     </nav>
-// }
+import {Link} from "react-scroll";
 
 function Navbar(){
     return(
-        <ul>
-            <li>
-                <Link to="/intro">Intro</Link>
-            </li>
-            <li>
-                <Link to="/resume">Resume</Link>
-            </li>
-            <li>
-                <Link to="/product">Product</Link>
-            </li>
-            <li>
-                <Link to="/technicalwriting">Technical Writing</Link>
-            </li>
-            <li>
-                <Link to="/contact">Contact</Link>
-            </li>
-        </ul>
+        <nav className="navbar">
+            <div className="desktopMenu">
+                <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-100} duration={500} className="desktopMenuListItem">Intro</Link>
+                <Link activeClass="active" to="about" spy={true} smooth={true} offset={-100} duration={500} className="desktopMenuListItem">About</Link>
+                <Link activeClass="active" to="product" spy={true} smooth={true} offset={-100} duration={500} className="desktopMenuListItem">Projects</Link>
+                <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={500} className="desktopMenuListItem">Contact Me</Link>
+            </div>
+        </nav>
     )
 }
 

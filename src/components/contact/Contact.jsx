@@ -117,57 +117,57 @@ const Contact = () => {
   };
 
   return (
-
-
-    <div className="c">
-    <div className="c-bg"></div>
-    <div className="c-wrapper">
-      <div className="c-left">
-        <h1 className="c-title">Contact me</h1>
-        <div className="c-info">
-          <div className="c-info-item">
-          <article className="contact__option">
-                {/* <MdOutlineEmail classname="contact__option-icon"/> */}
-                <img className="c-icon" src={Email} alt="" />
-                <h3>Email</h3>
-                <h4>Indrajeet.patwardhan@gmail.com</h4>
-                <a href="mailto:Indrajeet.patwardhan@gmail.com" target="_blank" rel="noreferrer">Send a message</a>
-            </article>
+    <section id="contact">
+      <div className="c">
+        <div className="c-bg"></div>
+        <div className="c-wrapper">
+          <div className="c-left">
+            <h1 className="c-title">Contact me</h1>
+            <div className="c-info">
+              <div className="c-info-item">
+              <article className="contact__option">
+                    {/* <MdOutlineEmail classname="contact__option-icon"/> */}
+                    <img className="c-icon" src={Email} alt="" />
+                    <h3>Email</h3>
+                    <h4>Indrajeet.patwardhan@gmail.com</h4>
+                    <a href="mailto:Indrajeet.patwardhan@gmail.com" target="_blank" rel="noreferrer">Send a message</a>
+                </article>
+              </div>
+              <div className="c-info-item">
+              <article className="contact__option">
+                  {/* <BsWhatsapp classname="contact__option-icon"/> */}
+                  <img className="c-icon" src={Whatsapp} alt="" />
+                  <h3>Whatsapp</h3>
+                  <h4>9498729524</h4>
+                  <a href="https://api.whatsapp.com/send?phone=9498729524" target="_blank" rel="noreferrer">Send a message</a>
+                </article>
+              </div>
+              <div className="c-info-item">
+              <article className="contact__option">
+                  {/* <BsWhatsapp classname="contact__option-icon"/> */}
+                  <img className="c-icon" src={LinkedIn} alt="" />
+                  <h3>LinkedIn</h3>
+                  <a href="https://www.linkedin.com/in/indrajeet-patwardhan-163b08211/" target="_blank" rel="noreferrer">View Profile</a>
+                </article>
+              </div>
+            </div>
           </div>
-          <div className="c-info-item">
-          <article className="contact__option">
-              {/* <BsWhatsapp classname="contact__option-icon"/> */}
-              <img className="c-icon" src={Whatsapp} alt="" />
-              <h3>Whatsapp</h3>
-              <h4>9498729524</h4>
-              <a href="https://api.whatsapp.com/send?phone=9498729524" target="_blank" rel="noreferrer">Send a message</a>
-            </article>
-          </div>
-          <div className="c-info-item">
-          <article className="contact__option">
-              {/* <BsWhatsapp classname="contact__option-icon"/> */}
-              <img className="c-icon" src={LinkedIn} alt="" />
-              <h3>LinkedIn</h3>
-              <a href="https://www.linkedin.com/in/indrajeet-patwardhan-163b08211/" target="_blank" rel="noreferrer">View Profile</a>
-            </article>
+          <div className="c-right">
+            <p className="c-desc">
+              {/* <b>What’s your story?</b> Get in touch. Always available for
+              freelancing if the right project comes along. me. */}
+            </p>
+            <form ref={form} onSubmit={sendEmail}>
+                  <input style={{backgroundColor: darkMode && "#333"}} type="text" name="name" placeholder="Your Full Name" required />
+                  <input style={{backgroundColor: darkMode && "#333"}} type="email" name="email" placeholder="Your Email" required />
+                  <textarea style={{backgroundColor: darkMode && "#333"}} name="message" rows="7" placeholder="Your Message" required ></textarea>
+                  {/* <button type="submit" className="btn btn-primary">Send Message</button> */}
+                  <button>Submit</button>
+                </form>
           </div>
         </div>
       </div>
-      <div className="c-right">
-        <p className="c-desc">
-          {/* <b>What’s your story?</b> Get in touch. Always available for
-          freelancing if the right project comes along. me. */}
-        </p>
-        <form ref={form} onSubmit={sendEmail}>
-              <input style={{backgroundColor: darkMode && "#333"}} type="text" name="name" placeholder="Your Full Name" required />
-              <input style={{backgroundColor: darkMode && "#333"}} type="email" name="email" placeholder="Your Email" required />
-              <textarea style={{backgroundColor: darkMode && "#333"}} name="message" rows="7" placeholder="Your Message" required ></textarea>
-              {/* <button type="submit" className="btn btn-primary">Send Message</button> */}
-              <button>Submit</button>
-            </form>
-      </div>
-    </div>
-  </div>
+    </section>
 
 
 
