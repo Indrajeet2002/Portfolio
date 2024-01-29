@@ -1,12 +1,14 @@
 import "./product.css";
 import React from "react";
-//TODO: import 5 images
 import IMG1 from "../../img/PortfolioWebsite.png"
 import IMG2 from "../../img/ProgramGenerator.png"
 import IMG3 from "../../img/Movify.jpg"
 import IMG4 from "../../img/JobHunter.png"
 import IMG5 from "../../img/CaveEscape.png"
 import IMG6 from "../../img/SnakeGame.png"
+import IMG7 from "../../img/ExpenseTracker.jpg"
+import IMG8 from "../../img/WorldTrotter.jpg"
+import IMG9 from "../../img/SimpleCalculator.jpg"
 //import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 //import { useState } from "react";
@@ -61,29 +63,29 @@ const data = [
     github: "https://github.com/Indrajeet2002/SnakeGame"
   },
 
-  // {
-  //   id: 7,
-  //   image: IMG6,
-  //   title: "Expense Tracker",
-  //   description: "An IOS app that allows users to create accounts and manage their finances based on categories of expenses.",
-  //   github: "https://github.com/Indrajeet2002/Expense-Tracker"
-  // },
+  {
+    id: 7,
+    image: IMG7,
+    title: "Expense Tracker",
+    description: "An IOS app that allows users to create accounts and manage their finances based on categories of expenses.",
+    github: "https://github.com/Indrajeet2002/Expense-Tracker"
+  },
 
-  // {
-  //   id: 8,
-  //   image: IMG6,
-  //   title: "World Trotter",
-  //   description: "An IOS app that allows for conversion between Fahrenheit and Celsius as well as translation between English and Spanish.",
-  //   github: "https://github.com/Indrajeet2002/World-Trotter"
-  // },
+  {
+    id: 8,
+    image: IMG8,
+    title: "World Trotter",
+    description: "An IOS app that allows for conversion between Fahrenheit and Celsius as well as translation between English and Spanish.",
+    github: "https://github.com/Indrajeet2002/World-Trotter"
+  },
 
-  // {
-  //   id: 6,
-  //   //image: ,
-  //   title: "kl",
-  //   description: "",
-  //   github: ""
-  // }
+  {
+    id: 9,
+    image: IMG9,
+    title: "Basic Calculator",
+    description: "A mobile calculator to use for basic arithmetic operations and quick calculations. More functionality to be added.",
+    github: ""
+  }
 ]
 
 
@@ -94,63 +96,34 @@ const Product = () => {
   return (
     <section id="product">
       <h1 className="portfolio__section-title">Projects</h1>
-      {/* <p>Web Development</p> */}
       <div className="container portfolio__container">
-        {
-          data.map(({id, image, title, description, github}) => {
-            return(
-              // <div className="p">
-              //   <div className="p-browser">
-              //     <div className="p-circle"></div>
-              //     <div className="p-circle"></div>
-              //     <div className="p-circle"></div>
-              //   </div>
+        {data.map(({ id, image, title, description, github }) => {
+          // Conditionally apply different class names based on id
+          const cardClass = id >= 1 && id <= 6 ? "project-card" : "mobile-card";
 
-              //   <div className="project-container">
-              //     <article key={id} className="portfolio__item">
-              //       <div className="portfolio__item-image">
-              //         <img src={image} alt={title}/>
-              //       </div>
-                    
-              //       <h3 className="portfolio__section-card-title">{title}</h3>
-                    
-              //       <div className="pro-details">
-              //         <h3 className="portfolio__section-description">{description}</h3>  
-              //       </div>
-                    
-              //       <div className="portfolio__item-cta">
-              //         <a href={github} className="btn" target="_blank">Github</a>
-              //       </div>
-              //     </article>
-              //   </div>
-
-                
-              // </div>
-              <div className="work-container">
-                <div className="project-container">
-                  <div style={{backgroundColor: darkMode && "#333"}} className="project-card">
-                    <img src={image} alt={title}/>
-                    <h2>{title}</h2>
-                    <div className="pro-details">
-                      <p>{description}</p>
-                      <div className="pro-btns">
-                        <a href={github} className="btn" target="_blank" rel="noreferrer">Github</a>
-                      </div>
-                    </div>
-                  </div>
+          return (
+            <div
+              key={id}
+              style={{ backgroundColor: darkMode && "#333" }}
+              className={cardClass}
+            >
+              <img src={image} alt={title} />
+              
+              <div className="pro-details">
+                <h2>{title}</h2>
+                <p>{description}</p>
+                <div className="pro-btns">
+                  <a href={github} className="btn" target="_blank" rel="noreferrer">
+                    Github
+                  </a>
                 </div>
               </div>
-              
-            )
-          })
-        }
-        
+            </div>
+          );
+        })}
       </div>
-
-      {/* <p>Mobile Development</p>
-      <p>Game Development</p> */}
     </section>
-  )
+  );
 }
 
 export default Product;

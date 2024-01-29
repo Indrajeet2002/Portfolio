@@ -88,6 +88,15 @@
   padding-bottom: 5rem;
 } */
 
+.mobile-card {
+  background: #fff;
+  padding: 1.2rem 1rem;
+  box-shadow: 10px 10px 8px #9a9a9a;
+  height: 320px; /* Set a fixed height for all cards */
+  display: flex;
+  flex-direction: row;
+}
+
 .project-heading{
   text-align: center;
   padding: 4rem 0 2rem 0;

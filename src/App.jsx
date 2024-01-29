@@ -9,6 +9,7 @@ import Product from "./components/product/Product";
 import Toggle from "./components/toggle/Toggle";
 import { ThemeContext } from "./context";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
 //import { Link } from "react-router-dom";
 
 const App = () => {
@@ -22,11 +23,12 @@ const App = () => {
       }}
     >
       <Navbar/>
-      <Toggle />
-      <Intro />
-      <About />
+      <Toggle/>
+      <Intro/>
+      <About/>
       <Product/>
-      <Contact />
+      <Contact/>
+      <Footer/>
       <Routes>
         <Route exact path="/intro" component {...Intro} />
         <Route exact path="/about" component {...About} />
