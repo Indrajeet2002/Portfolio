@@ -3,12 +3,14 @@ import React from "react";
 import IMG1 from "../../img/PortfolioWebsite.png"
 import IMG2 from "../../img/ProgramGenerator.png"
 import IMG3 from "../../img/Movify.jpg"
-import IMG4 from "../../img/JobHunter.png"
+// import IMG4 from "../../img/JobHunter.png"
 import IMG5 from "../../img/CaveEscape.png"
 import IMG6 from "../../img/SnakeGame.png"
 import IMG7 from "../../img/ExpenseTracker.jpg"
 import IMG8 from "../../img/WorldTrotter.jpg"
 import IMG9 from "../../img/SimpleCalculator.jpg"
+import IMG10 from "../../img/SpaceInvaders.jpg"
+
 //import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 //import { useState } from "react";
@@ -39,12 +41,20 @@ const data = [
     github: "https://github.com/Indrajeet2002/my-app"
   },
 
+  // {
+  //   id: 4,
+  //   image: IMG4,
+  //   title: "Job Hunter",
+  //   description: "The website allows employers and employees to make an account, as well as post jobs and apply for jobs, respectively.",
+  //   github: "https://github.com/Indrajeet2002/Job-Hunter"
+  // },
+
   {
     id: 4,
-    image: IMG4,
-    title: "Job Hunter",
-    description: "The website allows employers and employees to make an account, as well as post jobs and apply for jobs, respectively.",
-    github: "https://github.com/Indrajeet2002/Job-Hunter"
+    image: IMG10,
+    title: "Space Invaders",
+    description: "A remake of the old arcade game where you have to defend Earth from alien ships. Use the barriers for protection, and destroy all aliens!",
+    github: "https://github.com/Indrajeet2002/Space-Invaders-master-main"
   },
 
   {
@@ -93,13 +103,74 @@ const data = [
 const Product = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
+
+  // Split the data array into three sections
+  const dataSection1 = data.slice(0, 3);
+  const dataSection2 = data.slice(3, 6);
+  const dataSection3 = data.slice(6, 9);
+
   return (
     <section id="product">
       <h1 className="portfolio__section-title">Projects</h1>
+      <h2 className="portfolio__category-title">Web Development</h2>
+      {/* Map for items 1-3 */}
       <div className="container portfolio__container">
-        {data.map(({ id, image, title, description, github }) => {
-          // Conditionally apply different class names based on id
-          const cardClass = id >= 1 && id <= 6 ? "project-card" : "mobile-card";
+        {dataSection1.map(({ id, image, title, description, github }) => {
+          const cardClass = "project-card"; // Assuming all are project cards
+
+          return (
+            <div
+              key={id}
+              style={{ backgroundColor: darkMode && "#333" }}
+              className={cardClass}
+            >
+              <img src={image} alt={title} />
+              
+              <div className="pro-details">
+                <h2>{title}</h2>
+                <p>{description}</p>
+                <div className="pro-btns">
+                  <a href={github} className="btn" target="_blank" rel="noreferrer">
+                    Github
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <h2 className="portfolio__category-title">Game Development</h2>
+      {/* Map for items 4-6 */}
+      <div className="container portfolio__container">
+        {dataSection2.map(({ id, image, title, description, github }) => {
+          const cardClass = "project-card"; // Assuming all are project cards
+
+          return (
+            <div
+              key={id}
+              style={{ backgroundColor: darkMode && "#333" }}
+              className={cardClass}
+            >
+              <img src={image} alt={title} />
+              
+              <div className="pro-details">
+                <h2>{title}</h2>
+                <p>{description}</p>
+                <div className="pro-btns">
+                  <a href={github} className="btn" target="_blank" rel="noreferrer">
+                    Github
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <h2 className="portfolio__category-title">Mobile Development</h2>
+      {/* Map for items 7-9 */}
+      <div className="container portfolio__container">
+        {dataSection3.map(({ id, image, title, description, github }) => {
+          const cardClass = "mobile-card"; // Assuming all are project cards
 
           return (
             <div
@@ -127,4 +198,3 @@ const Product = () => {
 }
 
 export default Product;
-

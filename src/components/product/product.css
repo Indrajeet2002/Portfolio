@@ -41,11 +41,16 @@
   background-color: white;
 }
 */
-.portfolio__section-title{
+.portfolio__section-title {
   text-align: center;
   font-size: 60px;
   width: 80%;
   margin-left: 8rem;
+}
+
+.portfolio__category-title {
+  text-align: center;
+  margin-top: 2rem;
 }
 /*
 .portfolio__section-card-title{
