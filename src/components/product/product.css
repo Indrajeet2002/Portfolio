@@ -111,7 +111,7 @@
   background: #fff;
   padding: 1.2rem 1rem;
   box-shadow: 10px 10px 8px #9a9a9a;
-  height: 320px; /* Set a fixed height for all cards */
+  height: 330px; /* Set a fixed height for all cards */
   display: flex;
   flex-direction: column;
 }
@@ -142,6 +142,16 @@
 
 .pro-btns .btn{
   padding: 0.5rem 1rem;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}
+
+.mobile-icon {
+  height: 20px;
+  width: 20px;
 }
 /*
 .portfolio__item h3{
