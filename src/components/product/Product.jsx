@@ -16,7 +16,10 @@ import IMG13 from "../../img/Kotlin.png"
 import IMG14 from "../../img/React.jpg"
 import IMG15 from "../../img/Java.png"
 import IMG16 from "../../img/C++.png"
-
+import IMG17 from "../../img/FaceRecognition.jpg"
+import IMG18 from "../../img/NPFinancialPredictor.jpg"
+import IMG19 from "../../img/ObjectRecognition.jpg"
+import IMG20 from '../../img/Django.png'
 
 //import { NavLink } from "react-router-dom";
 import { useContext } from "react";
@@ -26,6 +29,33 @@ import { ThemeContext } from "../../context";
 const data = [
   {
     id: 1,
+    image: IMG18,
+    title: "Non Profit Financial Predictor",
+    icon: IMG20,
+    description: "An app to predict the financial success of non profit organizations using publicly available financial data from the last 10 years.",
+    github: "https://github.com/Indrajeet2002/NP_FinancialPredictor"
+  },
+    
+  {
+    id: 2,
+    image: IMG17,
+    title: "Facial Recognition Analysis",
+    icon: IMG11,
+    description: "Analyzing the strengths and weaknesses of several commonly used machine learning algorithms by training and testing models on the Olivetti Faces and LFW Faces datasets.",
+    github: "https://github.com/Indrajeet2002/Face-Recognition"
+  },
+
+  {
+    id: 3,
+    image: IMG19,
+    title: "Object Recognition",
+    icon: IMG11,
+    description: "Performing object recognition on the CIFAR-10 dataset using a convolutional neural network model.",
+    github: "https://github.com/Indrajeet2002/Machine-Learning-in-Python"
+  },
+
+  {
+    id: 4,
     image: IMG1,
     title: "Portfolio Website",
     icon: IMG14,
@@ -34,7 +64,7 @@ const data = [
   },
     
   {
-    id: 2,
+    id: 5,
     image: IMG2,
     title: "Program Generator",
     icon: IMG14,
@@ -43,7 +73,7 @@ const data = [
   },
 
   {
-    id: 3,
+    id: 6,
     image: IMG3,
     title: "Movify",
     icon: IMG14,
@@ -61,7 +91,7 @@ const data = [
   // },
 
   {
-    id: 4,
+    id: 7,
     image: IMG10,
     title: "Space Invaders",
     icon: IMG11,
@@ -70,7 +100,7 @@ const data = [
   },
 
   {
-    id: 5,
+    id: 8,
     image: IMG5,
     title: "Cave Escape",
     icon: IMG15,
@@ -79,7 +109,7 @@ const data = [
   },
 
   {
-    id: 6,
+    id: 9,
     image: IMG6,
     title: "Snake Game",
     icon: IMG16,
@@ -88,7 +118,7 @@ const data = [
   },
 
   {
-    id: 7,
+    id: 10,
     image: IMG7,
     title: "Expense Tracker",
     icon: IMG12,
@@ -97,7 +127,7 @@ const data = [
   },
 
   {
-    id: 8,
+    id: 11,
     image: IMG8,
     title: "World Trotter",
     icon: IMG12,
@@ -106,7 +136,7 @@ const data = [
   },
 
   {
-    id: 9,
+    id: 12,
     image: IMG9,
     title: "Basic Calculator",
     icon: IMG13,
@@ -125,11 +155,12 @@ const Product = () => {
   const dataSection1 = data.slice(0, 3);
   const dataSection2 = data.slice(3, 6);
   const dataSection3 = data.slice(6, 9);
+  const dataSection4 = data.slice(9, 12);
 
   return (
     <section id="product">
       <h1 className="portfolio__section-title">Projects</h1>
-      <h2 className="portfolio__category-title">Web Development</h2>
+      <h2 className="portfolio__category-title">AI/ML</h2>
       {/* Map for items 1-3 */}
       <div className="container portfolio__container">
         {dataSection1.map(({ id, image, title, icon, description, github }) => {
@@ -159,10 +190,40 @@ const Product = () => {
           );
         })}
       </div>
-      <h2 className="portfolio__category-title">Game Development</h2>
+      <h2 className="portfolio__category-title">Web Development</h2>
       {/* Map for items 4-6 */}
       <div className="container portfolio__container">
         {dataSection2.map(({ id, image, title, icon, description, github }) => {
+          const cardClass = "project-card"; // Assuming all are project cards
+
+          return (
+            <div
+              key={id}
+              style={{ backgroundColor: darkMode && "#333" }}
+              className={cardClass}
+            >
+              <img src={image} alt={title} />
+              
+              <div className="pro-details">
+                <h2>{title}</h2>
+                <div className="icon">
+                  <img src={icon} alt={title} />
+                </div>
+                <p>{description}</p>
+                <div className="pro-btns">
+                  <a href={github} className="btn" target="_blank" rel="noreferrer">
+                    Github
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <h2 className="portfolio__category-title">Game Development</h2>
+      {/* Map for items 7-9 */}
+      <div className="container portfolio__container">
+        {dataSection3.map(({ id, image, title, icon, description, github }) => {
           const cardClass = "project-card"; // Assuming all are project cards
 
           return (
@@ -190,9 +251,9 @@ const Product = () => {
         })}
       </div>
       <h2 className="portfolio__category-title">Mobile Development</h2>
-      {/* Map for items 7-9 */}
+      {/* Map for items 10-12 */}
       <div className="container portfolio__container">
-        {dataSection3.map(({ id, image, title, icon, description, github }) => {
+        {dataSection4.map(({ id, image, title, icon, description, github }) => {
           const cardClass = "mobile-card"; // Assuming all are project cards
 
           return (

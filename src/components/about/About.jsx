@@ -75,6 +75,7 @@ const About = () => {
                     <div class="card__content">
                       <div class="card__body">
                         <ul>
+                          <li>April 2024 - Present: Graduate Research Assistant at CSUF</li>
                           <li>June 2023 - September 2023: Project Intern at LTIMindtree </li>
                           <li>May 2022 - July 2022: Summer Research Intern with ASSURE-US</li>
                         </ul>
